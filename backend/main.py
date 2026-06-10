@@ -49,7 +49,7 @@ def fetch_news(company_name: str):
     return news_data.get("articles", [])
 #work on this ^^
 
-#formats a diction
+#formats a dictionary into structured text for claude to parse
 def format_articles(articles: list):
     news_text = ""
     #loops through articles and appends title and description to news_text
@@ -60,14 +60,14 @@ def format_articles(articles: list):
 
     return news_text
 
-"""
+
 def ask_claude(company_name: str, news_text: str):
     #logs into anthropic, calls basesettings to view claude api key
     client = anthropic.Anthropic(api_key = settings.ANTHROPIC_API_KEY)
 
     #message that is sent to claude
 
-    prompt = f
+    prompt = f"""
     You are a company research analyst helping a CS student evaluate companies for interns
     here are the recent articles about {company_name}:
 
@@ -79,7 +79,7 @@ def ask_claude(company_name: str, news_text: str):
     -anything relevent to a cs student considering them as an employer
 
     Be direct and factual. No bullet points - write in paragraph form.
-
+"""
 
     #sends the message
     message = client.messages.create(
@@ -112,7 +112,6 @@ def research_company(request: ResearchRequest):
         "Articles Used": len(articles)
     }
 
-"""
 
 
 
