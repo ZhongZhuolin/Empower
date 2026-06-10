@@ -29,13 +29,12 @@ def fetch_news(company_name: str):
 
     #searches for everything, for more info look at newsapi api docs
     news_url = "https://newsapi.org/v2/everything"
-    year_ago = (datetime.date.today() - datetime.timedelta(days = 365)).isoformat()
+
     params = {
         "q" : company_name,
-        "pageSize" : 5,
-        "sortBy": "publishedAt",
+        "pageSize" : 10,
+        "sortBy": "relevancy",
         "language": "en",
-
         "apiKey" : settings.NEWS_API_KEY
     }
 
@@ -47,7 +46,7 @@ def fetch_news(company_name: str):
 
     #get article objects, if nothing return empty list
     return news_data.get("articles", [])
-#work on this ^^
+##good for now
 
 #formats a dictionary into structured text for claude to parse
 def format_articles(articles: list):
