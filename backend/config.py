@@ -1,6 +1,9 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict #tool that makes sure api keys are valid strings
 from pathlib import Path #library for finding paths
 
+#cache constants
+News TTL = 86400 #24hrs
+Wiki TTL = 604800 #7days
 
 #Pydantic for parsing api keys and string validation
 class Settings(BaseSettings):

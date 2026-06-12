@@ -5,7 +5,7 @@ from config import settings
 #calls an newsapi.org to search through news articles related to requested company
 #declares an async function that allows for pausing to let other functions to run
 #httpx
-async def fetch_news(company_name: str) -> list:
+async def fetch_news(company_name: str) -> NewsPayload:
 
     #searches for everything, for more info look at newsapi api docs
     news_url = "https://newsapi.org/v2/everything"
