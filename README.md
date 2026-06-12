@@ -2,7 +2,7 @@
 
 **Company intelligence for STEM students recruiting in tech, SWE, data science, and defense.**
 
-Empower is a fusion layer for recruiting. Instead of 10 open tabs that don't talk to each other, you get a single structured signal brief — Claude reads the job descriptions, recent news, compensation data, and company context, and tells you in 30 seconds whether to apply now or keep watching.
+Empower is an intelligence platform and fusion layer for recruiting. Instead of 10 open tabs that don't talk to each other, you get a single structured signal brief. Claude reads the job descriptions, recent news, compensation data, and company context, and tells you in 30 seconds whether to apply now or keep watching. This is paired with a live daily job board, personal watch history that updates weekly, presenting a Data intelligence platform that tracks, analyzes, and updates your  traget companies.
 
 Inspired by Palantir's Gotham: ingest from multiple sources, fuse into actionable intelligence, surface what matters.
 
@@ -12,7 +12,7 @@ Inspired by Palantir's Gotham: ingest from multiple sources, fuse into actionabl
 
 Recruiting research is fragmented. During a typical recruiting season you might have Handshake, LinkedIn Jobs, Workday, Indeed, and Greenhouse open simultaneously — lots of data, little clarity. None of it connects.
 
-A student looking at Anduril doesn't need more information. They need something that reads the 12 open JDs, the recent funding news, the Glassdoor comp data, and the Wikipedia founding story, and returns:
+A student looking at Anduril doesn't need more information. They need something that reads the 12 open Job Boards, the recent funding news, the Glassdoor comp data, and the Wikipedia founding story, and returns:
 
 > *Series E defense AI company. Aggressively hiring cleared SWEs in Austin and Irvine. L4 comp competitive with FAANG. DoD contract announced in the last 30 days. Strong signal to apply now.*
 
