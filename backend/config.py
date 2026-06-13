@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict #tool that makes 
 from pathlib import Path #library for finding paths
 
 #cache constants
-News TTL = 86400 #24hrs
-Wiki TTL = 604800 #7days
+News_TTL = 86400 #24hrs
+Wiki_TTL = 604800 #7days
 
 #Pydantic for parsing api keys and string validation
 class Settings(BaseSettings):

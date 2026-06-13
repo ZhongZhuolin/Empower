@@ -1,5 +1,6 @@
 from services.news import fetch_news
 import asyncio
+from cache import _cache
 
 def test_fetch_news():
     result = asyncio.run(fetch_news("Palantir"))

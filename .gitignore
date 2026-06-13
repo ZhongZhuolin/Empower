@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+.pytest_cache/
 
 # Node
 node_modules/
@@ -15,3 +16,6 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+
+#pytest
+.pytest_cache/

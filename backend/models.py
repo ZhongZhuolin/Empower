@@ -1,9 +1,8 @@
 #This file validates what the user inputs as a company and role
 # as well as validates the payload from each service
-
 from pydantic import BaseModel, Field #tool that checks if user request makes sense
-
 import datetime
+import time
 #Pydantic for parsing company and position request for string, and string length validation
 class ResearchRequest(BaseModel):
     company_name: str = Field(min_length = 1, max_length = 50)
