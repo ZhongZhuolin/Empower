@@ -1,6 +1,6 @@
+#File for storing wiki summary of company which updates faster than Claude
 #wiki library for company summary
 import wikipediaapi
-import time
 import datetime
 #return errors instead of raw exeptions
 from fastapi import HTTPException
@@ -13,7 +13,8 @@ from cache import cache_get, cache_set
 
 #wikipedia summary for claude to to base information off of, updates for newer companies due to ai knowledge cutoff
 async def fetch_wiki(company_name: str) -> WikiPayload:
-    cached = cache_get(company_name)
+    #get the key wiki:company to prevent naming conflicts
+    cached = cache_get(f"wiki:{company_name}")
     if cached is not None:
         wiki_summary, wiki_source = cached
         return WikiPayload(
@@ -30,7 +31,8 @@ async def fetch_wiki(company_name: str) -> WikiPayload:
 
     #if the page exists, return the data provenance object, as well as put the information in the cache
     if page.exists():
-        cache_set(company_name, page.summary, Wiki_TTL, page.fullurl)
+        #set the key to be set:company to prevent naming conflicts
+        cache_set(f"wiki:{company_name}", page.summary, Wiki_TTL, page.fullurl)
         return WikiPayload(
             summary= page.summary,
             fetched_at= datetime.datetime.now(),

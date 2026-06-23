@@ -1,3 +1,4 @@
+#File for storing info in and manipulating the cache
 #to store unix time so we can just compare numbers not datetime objects
 import time
 
