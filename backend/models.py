@@ -6,7 +6,7 @@ import time
 #Pydantic for parsing company and position request for string, and string length validation
 class ResearchRequest(BaseModel):
     company_name: str = Field(min_length = 1, max_length = 50)
-    position: str = Field(min_length = 1, max_length = 30)
+    position: str | None = Field(default=None, max_length=30)
 #ensures each article object has proper attributes
 class NewsArticle(BaseModel):
     title : str

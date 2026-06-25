@@ -50,7 +50,7 @@ async def fetch_news(company_name: str) -> NewsPayload:
     #moved here so we can see if the articles have descriptions first and isn't linked to consent walls
     if not articles:
         raise HTTPException(status_code=404, detail="No News articles found for this company")
-        
+
     #set the key to be news:company to prevent naming conflicts
     cache_set(f"news:{company_name}", articles, News_TTL)
 
