@@ -7,7 +7,7 @@ from models import SignalScore
 client = AsyncAnthropic(api_key=settings.ANTHROPIC_API_KEY)
 
 async def score_signals(company_name: str, brief: str) -> SignalScore:
-    prompt = f"""You are a recruiting-signal analyst. Based on the research brief below for {company_name}, rate how strong a signal it is for a CS student to apply RIGHT NOW.
+    prompt = f""" No EMOJIS or emdashes!!! You are a recruiting-signal analyst. Based on the research brief below for {company_name}, rate how strong a signal it is for a CS student to apply RIGHT NOW.
 
 Brief:
 {brief}

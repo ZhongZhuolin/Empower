@@ -7,7 +7,7 @@ client = AsyncAnthropic(api_key = settings.ANTHROPIC_API_KEY)
 async def ask_claude(company_name: str, news_text: str, wiki_text: str) -> str:
 
     #message that is sent to claude
-    prompt = f"""You are a company research analyst helping a CS student evaluate companies for internships.
+    prompt = f"""No EMOJIS or emdashes!!! You are a company research analyst helping a CS student evaluate companies for internships.
     Company background (Wikipedia):
     {wiki_text}
 
