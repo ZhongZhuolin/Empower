@@ -25,10 +25,17 @@ class WikiPayload(BaseModel):
     fetched_at: datetime.datetime
     source: str
 
+# signal scoring mechanism
+class SignalScore(BaseModel):
+    score: int
+    recommendation: str
+    reasoning: str
+    
 #ensures the report being sent to the user has correct information
 class IntelligenceReport(BaseModel):
     news: NewsPayload
     wiki_summary: WikiPayload
     claude_summary: str
+    signal: SignalScore
     source: str
     fetched_at: datetime.datetime
