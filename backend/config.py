@@ -9,6 +9,7 @@ Wiki_TTL = 604800 #7days
 class Settings(BaseSettings):
     NEWS_API_KEY: str
     ANTHROPIC_API_KEY: str
+    DATABASE_URL: str
     #LEVELS_FYI_API_KEY:
     #since this finds a relative path, i used pathlib to find a path to env in the same folder as this file main.py
     model_config = SettingsConfigDict(env_file= Path(__file__).parent / ".env")
@@ -19,4 +20,5 @@ class Settings(BaseSettings):
 # - LEVELS_FYI_API_KEY
 settings = Settings()
 
+#Database_URL
 
