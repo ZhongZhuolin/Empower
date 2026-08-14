@@ -30,7 +30,7 @@ class SignalScore(BaseModel):
     score: int
     recommendation: str
     reasoning: str
-    
+
 #ensures the report being sent to the user has correct information
 class IntelligenceReport(BaseModel):
     news: NewsPayload
@@ -39,3 +39,4 @@ class IntelligenceReport(BaseModel):
     signal: SignalScore
     source: str
     fetched_at: datetime.datetime
+    previous_score: int | None = None
