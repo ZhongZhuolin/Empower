@@ -5,6 +5,12 @@ from pathlib import Path #library for finding paths
 News_TTL = 86400 #24hrs
 Wiki_TTL = 604800 #7days
 
+#amount of briefs claude can read
+HISTORY_LIMIT = 10
+
+
+Report_TTL = 21600 #6 hours
+
 #Pydantic for parsing api keys and string validation
 class Settings(BaseSettings):
     NEWS_API_KEY: str

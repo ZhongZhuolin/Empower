@@ -40,3 +40,4 @@ class IntelligenceReport(BaseModel):
     source: str
     fetched_at: datetime.datetime
     previous_score: int | None = None
+    trend: str | None = None
